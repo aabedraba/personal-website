@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import Typical from "react-typical";
 
 const Index = () => {
