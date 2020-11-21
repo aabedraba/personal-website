@@ -4,15 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "next",
-    "build": "tsc",
-    "dev": "next dev",
+    "start": "cd dist && next",
+    "next-build": "cd dist && next build",
+    "build": "tsc && npm run copy && npm run next-build",
+    "dev": "cd dist && next dev",
+    "copy": "cp -r src/css src/tailwind.config.js dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "next": "^9.5.5",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
@@ -20,6 +23,7 @@
     "ts-node": "^9.0.0"
   },
   "devDependencies": {
+    "@types/express": "^4.17.9",
     "@types/node": "^14.14.9",
     "@types/react": "^16.14.0",
     "typescript": "^4.1.2"
