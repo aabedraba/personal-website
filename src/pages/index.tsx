@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 
 const Index = () => {
   return <h1>Abdallah Abedraba</h1>;
