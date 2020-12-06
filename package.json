@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd dist && next",
+    "start": "cd dist && node -r esm server.js",
     "next-build": "cd dist && next build",
     "build": "tsc && npm run copy && npm run next-build",
     "dev": "cd dist && next dev",
@@ -15,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "esm": "^3.2.25",
     "express": "^4.17.1",
     "next": "^10.0.3",
     "react": "^17.0.1",
